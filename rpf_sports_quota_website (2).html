@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Railway Protection Force | Sports Quota Profile</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f4f6f8; color: #222; }
+    .login-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; background: linear-gradient(135deg, #071b3a, #8b0000); }
+    .login-box { width: 100%; max-width: 420px; background: white; padding: 28px; border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+    .login-box h1 { color: #071b3a; font-size: 24px; margin-bottom: 8px; text-align: center; }
+    .login-box p { text-align: center; color: #666; margin-bottom: 22px; }
+    label { display: block; font-weight: bold; margin: 12px 0 6px; }
+    input { width: 100%; padding: 12px; border: 1px solid #bbb; border-radius: 8px; font-size: 15px; }
+    button { width: 100%; margin-top: 18px; padding: 13px; border: none; border-radius: 8px; background: #8b0000; color: white; font-size: 16px; font-weight: bold; cursor: pointer; }
+    button:hover { background: #650000; }
+    .error { display: none; margin-top: 12px; color: #b00020; text-align: center; font-weight: bold; }
+
+    .site { display: none; }
+    header { background: #071b3a; color: white; }
+    .topbar { padding: 8px 24px; background: #8b0000; font-size: 14px; text-align: center; }
+    .brand { display: flex; align-items: center; gap: 16px; padding: 22px 24px; }
+    .emblem { width: 64px; height: 64px; border-radius: 50%; background: #f5c542; display: flex; align-items: center; justify-content: center; color: #071b3a; font-weight: bold; font-size: 22px; }
+    .brand h1 { font-size: 30px; }
+    .brand p { color: #d9e6ff; margin-top: 4px; }
+    nav { background: #102b57; padding: 12px 24px; display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; padding: 40px 24px; max-width: 1200px; margin: auto; align-items: center; }
+    .hero-card { background: white; padding: 28px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .hero h2 { color: #071b3a; font-size: 34px; margin-bottom: 12px; }
+    .hero p { line-height: 1.7; color: #444; }
+    .profile-photo { width: 100%; max-height: 540px; object-fit: cover; border-radius: 18px; box-shadow: 0 12px 35px rgba(0,0,0,.25); }
+    section { max-width: 1200px; margin: 24px auto; padding: 0 24px; }
+    .section-title { color: #071b3a; border-left: 6px solid #8b0000; padding-left: 12px; margin-bottom: 16px; font-size: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { background: white; padding: 20px; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.07); }
+    .card h3 { color: #8b0000; margin-bottom: 8px; }
+    .info-table { width: 100%; border-collapse: collapse; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,.07); }
+    .info-table th, .info-table td { padding: 14px; border-bottom: 1px solid #e5e5e5; text-align: left; }
+    .info-table th { width: 32%; background: #f1f4f9; color: #071b3a; }
+    .notice { background: #fff7df; border-left: 6px solid #f0a500; padding: 16px; border-radius: 10px; line-height: 1.6; }
+    footer { margin-top: 40px; background: #071b3a; color: white; text-align: center; padding: 22px; }
+    @media (max-width: 850px) { .hero { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } .brand h1 { font-size: 23px; } }
+  </style>
+</head>
+<body>
+  <div class="login-page" id="loginPage">
+    <div class="login-box">
+      <h1>Railway Protection Force</h1>
+      <p>Sports Quota Profile Access</p>
+      <form onsubmit="return loginUser()">
+        <label for="userid">User ID</label>
+        <input type="text" id="userid" placeholder="Enter ID" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter Password" required />
+        <button type="submit">Login</button>
+        <div class="error" id="errorMsg">Invalid ID or Password</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="site" id="mainSite">
+    <header>
+      <div class="topbar">Railway Protection Force | Sports Quota Information Portal</div>
+      <div class="brand">
+        <div class="emblem">RPF</div>
+        <div>
+          <h1>Railway Protection Force</h1>
+          <p>Service, Security & Sports Excellence</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#sports">Sports Quota</a>
+        <a href="#posting">Posting</a>
+        <a href="#status">Service Status</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home" class="hero">
+      <div class="hero-card">
+        <h2>Constable Sports Quota Profile</h2>
+        <p>यह पेज RPF constable sports quota joining profile की जानकारी दिखाने के लिए बनाया गया है। इसमें athlete details, joining information, posting zone और service status शामिल हैं।</p>
+      </div>
+      <img src="38869.png" alt="Constable Shani Yadav" class="profile-photo" />
+    </main>
+
+    <section id="profile">
+      <h2 class="section-title">Personal Profile</h2>
+      <table class="info-table">
+        <tr><th>Name</th><td>Shani Yadav</td></tr>
+        <tr><th>Rank</th><td>Constable</td></tr>
+        <tr><th>Date of Birth</th><td>06.03.2003</td></tr>
+        <tr><th>Sport/Event</th><td>Athlete - 100m</td></tr>
+        <tr><th>Selection Category</th><td>Sports Quota</td></tr>
+        <tr><th>Achievement</th><td>National Gold Medalist</td></tr>
+      </table>
+    </section>
+
+    <section id="sports">
+      <h2 class="section-title">Sports Quota Information</h2>
+      <div class="grid">
+        <div class="card"><h3>Event</h3><p>100m Athletics</p></div>
+        <div class="card"><h3>Rank</h3><p>1st Rank</p></div>
+        <div class="card"><h3>Achievement</h3><p>National Gold Medalist</p></div>
+        <div class="card"><h3>Joining Date</h3><p>24.12.2023</p></div>
+      </div>
+    </section>
+
+    <section id="posting">
+      <h2 class="section-title">Posting Details</h2>
+      <table class="info-table">
+        <tr><th>Railway Zone</th><td>Chennai Railway Zone</td></tr>
+        <tr><th>Posting Location</th><td>Chennai</td></tr>
+        <tr><th>Department</th><td>Railway Protection Force</td></tr>
+      </table>
+    </section>
+
+    <section id="status">
+      <h2 class="section-title">Service Status</h2>
+      <div class="notice">
+        Constable Shani Yadav joined through Sports Quota on 24.12.2023. As per provided information, resignation/design status date is mentioned as 16.12.2025.
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <p>Contact Number: <strong>7470688326</strong></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Railway Protection Force</p>
+    </footer>
+  </div>
+
+  <script>
+    function loginUser() {
+      const id = document.getElementById('userid').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      const correctId = 'RPF04260362C';
+      const correctPass = '06032003';
+
+      if (id === correctId && pass === correctPass) {
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('mainSite').style.display = 'block';
+        return false;
+      }
+
+      document.getElementById('errorMsg').style.display = 'block';
+      return false;
+    }
+  </script>
+</body>
+</html>
